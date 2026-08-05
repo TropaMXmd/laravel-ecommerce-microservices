@@ -9,7 +9,8 @@
 		"illuminate/http": "^13.0",
 		"illuminate/log": "^13.0",
 		"illuminate/routing": "^13.0",
-		"illuminate/database": "^13.0"
+		"illuminate/database": "^13.0",
+		"firebase/php-jwt": "^7.1"
 	},
 	"autoload": {
 		"psr-4": {

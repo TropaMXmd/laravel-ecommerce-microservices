@@ -213,6 +213,7 @@ services:
     container_name: order-service
     volumes:
       - ./order-service:/var/www
+      - ./packages:/var/packages
     working_dir: /var/www
     depends_on:
       order-db:

@@ -4,6 +4,7 @@ namespace Ecomstarter\Core;
 
 use Ecomstarter\Core\Http\Middleware\HttpLogMiddleware;
 use Ecomstarter\Core\Http\Middleware\TraceIdMiddleware;
+use Ecomstarter\Core\Http\Middleware\ValidateJwt;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +15,7 @@ class CoreServiceProvider extends ServiceProvider
         // ── Middleware aliases ────────────────────────────────────────────────
         $router->aliasMiddleware('trace.id', TraceIdMiddleware::class);
         $router->aliasMiddleware('http.log', HttpLogMiddleware::class);
+        $router->aliasMiddleware('validate.jwt', ValidateJwt::class);
 
         // ── Publishable assets ────────────────────────────────────────────────
         if ($this->app->runningInConsole()) {
