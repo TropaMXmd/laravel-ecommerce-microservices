@@ -37,6 +37,11 @@ class CoreServiceProvider extends ServiceProvider
             __DIR__ . '/../config/http_log.php',
             'http_log'
         );
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/core.php',
+            'core'
+        );
     }
 
     public function register(): void {}
